@@ -36,13 +36,13 @@ else
 endif
 
 BUILD_VERSION = "\
-	-X github.com/airbnb/gosal/version.appName=${APP_NAME} \
-	-X github.com/airbnb/gosal/version.version=${VERSION} \
-	-X github.com/airbnb/gosal/version.branch=${BRANCH} \
-	-X github.com/airbnb/gosal/version.buildUser=${USER} \
-	-X github.com/airbnb/gosal/version.buildDate=${NOW} \
-	-X github.com/airbnb/gosal/version.revision=${REVISION} \
-	-X github.com/airbnb/gosal/version.goVersion=${GOVERSION}"
+	-X github.com/w0de/gosal/version.appName=${APP_NAME} \
+	-X github.com/w0de/gosal/version.version=${VERSION} \
+	-X github.com/w0de/gosal/version.branch=${BRANCH} \
+	-X github.com/w0de/gosal/version.buildUser=${USER} \
+	-X github.com/w0de/gosal/version.buildDate=${NOW} \
+	-X github.com/w0de/gosal/version.revision=${REVISION} \
+	-X github.com/w0de/gosal/version.goVersion=${GOVERSION}"
 
 define HELP_TEXT
 

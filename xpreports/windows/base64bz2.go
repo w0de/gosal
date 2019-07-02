@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/airbnb/gosal/config"
-	"github.com/airbnb/gosal/xpreports/cm"
+	"github.com/w0de/gosal/config"
+	"github.com/w0de/gosal/xpreports/cm"
 	"github.com/dsnet/compress/bzip2"
 	"github.com/groob/plist"
 	"github.com/pkg/errors"
@@ -19,6 +19,7 @@ type basereport struct {
 	OSFamily           string
 	MachineInfo        *MachineInfo
 	Facter             cm.Facts
+	ManagedInstalls    Installs
 	StartTime          string
 }
 
@@ -28,6 +29,11 @@ func BuildBase64bz2Report(conf *config.Config) (string, error) {
 
 	if conf.Management != nil {
 		facts, _ = cm.GetFacts(conf.Management.Tool, conf.Management.Path, conf.Management.Command)
+	}
+
+	installs, err := CreateManagedInstalls()
+	if err != nil {
+		return "", errors.Wrap(err, "message")
 	}
 
 	cDrive, err := GetCDrive()
@@ -52,6 +58,7 @@ func BuildBase64bz2Report(conf *config.Config) (string, error) {
 		ConsoleUser:        strings.Split(computerSystem.UserName, "\\")[1],
 		OSFamily:           "Windows",
 		Facter:             facts,
+		ManagedInstalls:    installs,
 	}
 
 	encodedReport, err := report.CompressAndEncode()

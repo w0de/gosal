@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/airbnb/gosal/config"
-	"github.com/airbnb/gosal/xpreports"
+	"github.com/w0de/gosal/config"
+	"github.com/w0de/gosal/xpreports"
 	"github.com/pkg/errors"
 )
 

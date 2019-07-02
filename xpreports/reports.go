@@ -2,7 +2,7 @@
 package xpreports
 
 import (
-	"github.com/airbnb/gosal/config"
+	"github.com/w0de/gosal/config"
 )
 
 // Report is a common report structure
