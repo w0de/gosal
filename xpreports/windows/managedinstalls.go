@@ -77,7 +77,6 @@ func filterManagedInstalls(p []Program) ([]Program, error) {
 
 	for _, element := range p {
 		if element.DisplayName == "" || strings.Contains(element.Name, "0FF1CE") {
-			continue
 		} else {
 			filtered = append(filtered, Program{
 				Description:      element.Description,
