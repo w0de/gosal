@@ -4,7 +4,7 @@ import (
 	"strconv"
 
 	"github.com/w0de/gosal/config"
-	"github.com/airbnb/gosal/version"
+	"github.com/w0de/gosal/version"
 	"github.com/w0de/gosal/xpreports/windows"
 	"github.com/pkg/errors"
 	uuid "github.com/satori/go.uuid"
