@@ -55,7 +55,7 @@ func formatManagedInstallFields(p []Program) ([]byte, error) {
 		all = append(all, ManagedInstallsFormatted{
 			Description:      element.Description,
 			DisplayName:      element.DisplayName,
-			Installed:        element.Installed,
+			Installed:        true,
 			InstalledSize:    element.InstalledSize,
 			InstalledVersion: element.InstalledVersion,
 			Name:             element.Name,
@@ -81,7 +81,6 @@ func filterManagedInstalls(p []Program) ([]Program, error) {
 			filtered = append(filtered, Program{
 				Description:      element.Description,
 				DisplayName:      element.DisplayName,
-				Installed:        true,
 				InstalledSize:    element.InstalledSize,
 				InstalledVersion: element.InstalledVersion,
 				Name:             element.Name,
@@ -142,7 +141,6 @@ type ManagedInstallsFormatted struct {
 type Program struct {
 	Description      string `json:"Comments"` // MS doesn't carry descriptions, this is close
 	DisplayName      string `json:"DisplayName"`
-	Installed        bool   // MS ins't munki so this will just default true
 	InstalledSize    int    `json:"EstimatedSize"`
 	InstalledVersion string `json:"DisplayVersion"`
 	Name             string `json:"PSChildName"` // UUID of the items uninstaller
