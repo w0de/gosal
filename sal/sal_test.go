@@ -6,7 +6,7 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/airbnb/gosal/config"
+	"github.com/w0de/gosal/config"
 )
 
 func TestCheckin(t *testing.T) {

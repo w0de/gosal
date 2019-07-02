@@ -7,9 +7,9 @@ import (
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 
-	"github.com/airbnb/gosal/config"
-	"github.com/airbnb/gosal/sal"
-	"github.com/airbnb/gosal/version"
+	"github.com/w0de/gosal/config"
+	"github.com/w0de/gosal/sal"
+	"github.com/w0de/gosal/version"
 )
 
 func createVersionCmd() *cobra.Command {
@@ -39,7 +39,7 @@ func createRootCmd(conf *config.Config) *cobra.Command {
 		Short: "gosal uploads machine details to sal",
 		Long: `Gosal is intended to be a multi platform client for sal.
 
-Complete documentation is available at https://github.com/airbnb/gosal/.`,
+Complete documentation is available at https://github.com/w0de/gosal/.`,
 		Run: func(cmd *cobra.Command, args []string) {
 			if !conf.Loaded() {
 				fatal(errors.New("config file not loaded. Must specify --config flag"))

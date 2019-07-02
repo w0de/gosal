@@ -5,8 +5,8 @@ import (
 	"encoding/base64"
 	"strings"
 
-	"github.com/airbnb/gosal/config"
-	"github.com/airbnb/gosal/xpreports/cm"
+	"github.com/w0de/gosal/config"
+	"github.com/w0de/gosal/xpreports/cm"
 	"github.com/dsnet/compress/bzip2"
 	"github.com/groob/plist"
 	"github.com/pkg/errors"
