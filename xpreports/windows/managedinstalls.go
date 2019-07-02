@@ -82,7 +82,7 @@ func filterManagedInstalls(p []Program) ([]Program, error) {
 			filtered = append(filtered, Program{
 				Description:      element.Description,
 				DisplayName:      element.DisplayName,
-				Installed:        element.Installed,
+				Installed:        true,
 				InstalledSize:    element.InstalledSize,
 				InstalledVersion: element.InstalledVersion,
 				Name:             element.Name,
