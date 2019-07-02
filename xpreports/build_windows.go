@@ -30,7 +30,7 @@ func buildReport(conf *config.Config) (*Report, error) {
 	}
 
 	// Get version information
-	v := Version.Version()
+	v := version.Version()
 
 	report := &Report{
 		Serial:          win32Bios.SerialNumber,
