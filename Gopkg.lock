@@ -65,7 +65,7 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:dcd1fb524f314a05c05d6df5aaccc8fcd42bbba445734c314aa53b618cea0a11"
+  digest = "1:43062427885330ee38c9f3a3492194c8356d1ce6d0ff0832598cfd5d373d0cc4"
   name = "github.com/w0de/gosal"
   packages = [
     "config",
@@ -76,7 +76,7 @@
     "xpreports/windows",
   ]
   pruneopts = ""
-  revision = "7277cf6a758070102ebe756d4afb6c756e90933a"
+  revision = "4d5a83c5b13df26562d89309008346287c92743e"
 
 [solve-meta]
   analyzer-name = "dep"
